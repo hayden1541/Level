@@ -1,0 +1,6 @@
+Fonts bundled in Level up your life (all SIL Open Font License 1.1, subset to KS X 1001 Hangul + symbols):
+- Galmuri11 (c) Lee Minseo — https://github.com/quiple/galmuri
+- Pretendard (c) Kil Hyung-jin — https://github.com/orioncactus/pretendard
+- Gowun Dodum (c) Yanghee Ryu — https://github.com/google/fonts/tree/main/ofl/gowundodum
+- Jua (c) Woowahan Brothers — https://github.com/google/fonts/tree/main/ofl/jua
+- Nanum Gothic, Nanum Myeongjo (c) NAVER Corporation — https://github.com/google/fonts/tree/main/ofl

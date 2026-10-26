@@ -1,0 +1,14 @@
+# build outputs
+dist/
+dist-pwa/
+out/
+android/build/
+android/assets/index.html
+ios/build/
+# signing key — never commit (anyone holding it could ship "updates" to installed copies)
+*.keystore
+*.jks
+# third-party build tools (download separately, see README)
+tools/apktool.jar
+tools/apksigner.jar
+__pycache__/

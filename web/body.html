@@ -1,0 +1,77 @@
+<div id="app">
+  <header class="top">
+    <div class="brand">LEVEL UP <b>YOUR LIFE</b></div>
+    <div class="row" style="min-width:0;justify-content:flex-end">
+      <button id="ddayChip" class="dchip" hidden></button>
+      <button id="musicBtn" class="dchip" aria-label="배경음악 켜기/끄기">♪ ON</button>
+    </div>
+  </header>
+  <main id="view" aria-live="polite"></main>
+  <nav class="tabs" aria-label="메뉴">
+    <button class="tab" data-tab="home"><svg viewBox="0 0 16 16"><path d="M7 1h2v1h1v1h1v1h1v1h1v1h1v2h-1v7H3V8H2V6h1V5h1V4h1V3h1V2h1zM6 10v4h4v-4z"/></svg>홈</button>
+    <button class="tab" data-tab="stats"><svg viewBox="0 0 16 16"><path d="M1 14h14v1H1zM2 8h3v5H2zM6.5 4h3v9h-3zM11 6h3v7h-3z"/></svg>통계</button>
+    <button class="tab" data-tab="cards"><svg viewBox="0 0 16 16"><path d="M2 3h9v1h1v9h-1v1H2v-1H1V4h1zM3 5v7h7V5zM4 6h5v1H4zM4 8h3v1H4zM13 5h1v1h1v8h-1v1H5v-1h8z"/></svg>카드</button>
+    <button class="tab" data-tab="cats"><svg viewBox="0 0 16 16"><path d="M2 2h5v1h1v-1h6v12H9v1H7v-1H2zM3 3v10h4V4H3zm6 1v9h4V3H9z"/></svg>과목</button>
+    <button class="tab" data-tab="dday"><svg viewBox="0 0 16 16"><path d="M4 1h2v2h4V1h2v2h2v12H2V3h2zM3 6v8h10V6zm2 2h2v2H5zm4 0h2v2H9z"/></svg>D-day</button>
+    <button class="tab" data-tab="settings"><svg viewBox="0 0 16 16"><path d="M7 1h2v2h2v-1h1v1h1v1h-1v2h2v2h-2v2h1v1h1v1h-1v1h-1v-1h-2v2H7v-2H5v1H4v-1H3v-1h1V9H2V7h2V5H3V4h1V3h1v1h2zM7 6v4h2V6z"/></svg>설정</button>
+  </nav>
+</div>
+
+<section id="timer" hidden aria-label="공부 타이머">
+  <div class="inner">
+    <div class="row between">
+      <span id="tPhase" class="phase">FOCUS</span>
+      <span id="tCat" class="row small"></span>
+    </div>
+    <canvas id="tScene" class="scene px"></canvas>
+    <div id="tClock" class="clock num">25:00</div>
+    <div class="bar thin" id="tBar"><i style="width:0%"></i></div>
+    <div class="row between small muted">
+      <span id="tInfo"></span>
+      <span id="tDistract"></span>
+    </div>
+    <div id="tCycles" class="cycle-dots"></div>
+    <button class="btn sm" id="tMusic" style="align-self:center">♪ 없음</button>
+    <div class="timer-btns">
+      <button class="btn" id="tPause">일시정지</button>
+      <button class="btn" id="tSkip">건너뛰기</button>
+      <button class="btn red" id="tStop">종료</button>
+    </div>
+    <blockquote id="tQuote" class="quote px"></blockquote>
+  </div>
+</section>
+
+<section id="fcStudy" hidden aria-label="플래시카드 학습">
+  <div class="inner">
+    <div class="row between">
+      <span class="phase" id="fcProg">1 / 10</span>
+      <span class="small muted grow" id="fcDeckName" style="text-align:center;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"></span>
+      <button class="btn sm ghost" id="fcX">✕ 그만</button>
+    </div>
+    <div class="bar thin" id="fcBar"><i style="width:0%"></i></div>
+    <div id="fcBody" class="stack"></div>
+  </div>
+</section>
+
+<div id="sheet" hidden><div class="sheet-panel" id="sheetPanel" role="dialog" aria-modal="true"></div></div>
+
+<div id="splash">
+  <h1 class="title-big" id="sTitle">LEVEL UP<b>YOUR LIFE</b></h1>
+  <div class="splash-mid">
+    <canvas id="sScene" class="scene px frame"></canvas>
+    <div class="splash-stage" id="sStage"></div>
+    <div class="evo-dots" id="sDots" aria-hidden="true"></div>
+  </div>
+  <p class="splash-quote" id="sQuote"></p>
+  <div class="tap" id="sTap">TAP TO START</div>
+</div>
+
+<div id="evo" hidden>
+  <div class="evo-text" id="eText">...?</div>
+  <canvas id="eScene" class="scene px frame"></canvas>
+  <div class="evo-sub" id="eSub"></div>
+  <button class="btn gold" id="eOk" hidden>좋아, 계속 간다</button>
+</div>
+
+<div class="flash" id="flash"></div>
+<div id="toast" hidden></div>

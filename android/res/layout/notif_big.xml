@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:gravity="center_vertical"
+    android:background="@drawable/notif_bg" android:padding="8dp">
+    <ImageView android:id="@+id/n_img" android:layout_width="128dp" android:layout_height="96dp" android:scaleType="fitCenter"/>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+        android:orientation="vertical" android:layout_marginLeft="12dp">
+        <TextView android:id="@+id/n_title" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="#fff2c14e" android:textSize="14sp" android:textStyle="bold" android:singleLine="true"/>
+        <Chronometer android:id="@+id/n_clock" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="#ffefe7d2" android:textSize="36sp" android:textStyle="bold" android:fontFamily="monospace"/>
+        <TextView android:id="@+id/n_sub" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="#ffa39dc4" android:textSize="11sp" android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout>
